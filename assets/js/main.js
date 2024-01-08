@@ -9,25 +9,27 @@ const kmPrice = 0.21;
 const discountUnder = 20
 const discountOver = 40
 
-// kmAmount = 40
-// psgAge = 19
-
+//Declaring variables for amount of KM and passenger age
 let kmAmount, psgAge;
 
+//Declaring value for submit button
 let calcButton = document.getElementById 
 ("submitValues");
 
-let resetButton = document.getElementById("reset-all")
+//Declaring variable for reset button
+let resetButton = document.getElementById("reset-all");
 
-let result = document.getElementById 
+//Declaring variable for price result
+let result = document.getElementById
 ("resultPrice");
 
-let resultTicket = document.getElementById("resultTicket")
+//Declaring the variable for ticket result (if discounted or not)
+let resultTicket = document.getElementById("resultTicket");
 
 //Declaring the variable resultName that comes from the input area
-let resultName = document.getElementById("resultName")
+let resultName = document.getElementById("resultName");
 
-//Function that randomized the number of the coach
+//Function that randomized the number of the coach (carriage actually)
 function generateCoachNumber() {
     return Math.floor(Math.random() * 20) + 1;
 }
@@ -38,15 +40,21 @@ function generateCPNumber() {
 }
 
 //Function allowing numeric values to be put into input areas
-function getValues(){
-    
-//Assigning variables values based on input areas numeric results
+function getValues(){ 
 
+    //Assigning variables values based on input areas numeric results
     kmAmount = kmAmountElement.value;
-
     psgAge = psgAgeElement.value;
-
     console.log (kmAmount, psgAge);
+    
+    //Name function
+    let passengerName = document.getElementById("name").value;
+    resultName.innerHTML = passengerName || "Scrivi il tuo nome e cognome nell'area di input";
+
+    if (kmAmount == 0 || psgAge == "default" ){
+        requirements.classList.toggle ("d-none")
+    }
+    
 }
 
 let finalPrice 
@@ -80,10 +88,6 @@ function finalPriceCalc(){
 // Method allowing to submit values for price calculation
 
 calcButton.addEventListener("click", function (){
-    //Name function
-    let passengerName = document.getElementById("name").value;
-    resultName.innerHTML = passengerName ||  "Scrivi il tuo nome e cognome nell'area di input";
-
     // Coach function
     let carrozza = generateCoachNumber();
     resultCarrozza.innerHTML = carrozza;
@@ -96,7 +100,6 @@ calcButton.addEventListener("click", function (){
     getValues()
     finalPriceCalc()
     resultPrice.innerHTML = finalPrice.toFixed(2) + "€"
-
 })
 
 //Method allowing to reset all the values
@@ -110,6 +113,12 @@ resetButton.addEventListener("click", function (){
     resultCarrozza.innerHTML = ""
     resultNumber.innerHTML = ""
     resultTicket.innerHTML = ""
+    
+    //Function that checks if all the camps have been compiled correctly, otherwise shows the error
+    if (!requirements.classList.contains("d-none")){
+
+        requirements.classList.toggle ("d-none")
+    }
 })
 
 

@@ -17,3 +17,14 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 
 Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
+
+
+
+IF  
+- value del campo nome
+- value del campo km
+- value dell'età
+NON SONO COMPILATI
+toggle d-block su id "requirement"
+
+else
