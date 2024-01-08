@@ -61,11 +61,13 @@ function priceCalc (firstElement, secondElement){
 //Function that checks the passenger's age
 
 function finalPriceCalc(){
-    if (psgAge < 18) {
+    if (psgAge.value < 18) {
         finalPrice = priceCalc (kmAmount, discountUnder);
+        console.log(psgAge.value)
     }   
-    else if (psgAge > 65){
+    else if (psgAge.value >= 65){
         finalPrice = priceCalc (kmAmount, discountOver);
+        console.log(psgAge.value)
     }   
     else {
         finalPrice = kmAmount * kmPrice;
