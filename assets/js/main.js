@@ -51,6 +51,7 @@ function getValues(){
     let passengerName = document.getElementById("name").value;
     resultName.innerHTML = passengerName || "Scrivi il tuo nome e cognome nell'area di input";
 
+    //Function that checks if the camps are compiled
     if (kmAmount == 0 || psgAge == "default" ){
         requirements.classList.toggle ("d-none")
     }
