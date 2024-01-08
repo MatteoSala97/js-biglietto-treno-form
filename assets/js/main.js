@@ -22,6 +22,8 @@ let resetButton = document.getElementById("reset-all")
 let result = document.getElementById 
 ("resultPrice");
 
+let resultTicket = document.getElementById("resultTicket")
+
 //Declaring the variable resultName that comes from the input area
 let resultName = document.getElementById("resultName")
 
@@ -61,16 +63,17 @@ function priceCalc (firstElement, secondElement){
 //Function that checks the passenger's age
 
 function finalPriceCalc(){
-    if (psgAge.value < 18) {
+    if (psgAge == "minorenne") {
         finalPrice = priceCalc (kmAmount, discountUnder);
-        console.log(psgAge.value)
+        resultTicket.innerHTML = "Condizione scontata per minorenni"
     }   
-    else if (psgAge.value >= 65){
+    else if (psgAge == "over65"){
         finalPrice = priceCalc (kmAmount, discountOver);
-        console.log(psgAge.value)
+        resultTicket.innerHTML = "Condizione scontata per over 65"
     }   
     else {
         finalPrice = kmAmount * kmPrice;
+        resultTicket.innerHTML = "Condizione non scontata"
     }
 }
 
@@ -105,6 +108,8 @@ resetButton.addEventListener("click", function (){
     resultName.innerHTML = ""
     document.getElementById("name").value = ""
     resultCarrozza.innerHTML = ""
+    resultNumber.innerHTML = ""
+    resultTicket.innerHTML = ""
 })
 
 

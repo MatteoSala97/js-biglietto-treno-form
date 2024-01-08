@@ -28,9 +28,14 @@
 
             <!-- FIXME -->
             <div>
-                <label for="age" class="bold text-light">Età del passeggero:</label>
+                <label for="psgAge" class="bold text-light">Età del passeggero:</label>
 
-                <input class="mt-2 form-control" type="number" name="psgAge" id="psgAge" min="0" placeholder="0" required>
+                <select class="form-select" aria-label="Default select example" id="psgAge">
+                    <option selected disabled>Età</option>
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over65">Over 65</option>
+                  </select>
             </div>
         </div>
         <div class="d-flex flex-row gap-5 mt-4">
@@ -49,11 +54,7 @@
                 </div>
                 <div class="col-2">
                     <span class="bold fs-5">Offerta</span>
-                    <div class="mt-5">
-                        biglietto standard
-                    </div>
-                    <div class="mt-5">
-                        biglietto scontato
+                    <div class="mt-5" id="resultTicket">
                     </div>
                 </div>
                 <div class="col-2">
