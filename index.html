@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biglietto del treno</title>
+
+     <!-- Boostrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+     <!-- My CSS -->
+     <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    <main class="d-flex flex-column align-items-center">
+        <h1 class="text-center text-light text-uppercase">Calcola il prezzo del tuo biglietto del treno con FrecciaBool</h1>
+
+        <div class="d-flex col-6 align-items-center text-center gap-5 ">
+            <div>
+                <label for="name">Nome e cognome:</label>
+                <input class="mt-2" type="text" name="name" id="name" placeholder="Nome e cognome">
+            </div>
+            <div>
+                <label for="kmAmount" class="bold text-light">Numero dei chilometri:</label>
+                <input class="mt-2" type="number" name="kmAmount" id="kmAmount"placeholder="0" min="1" required>
+            </div>
+
+            <!-- FIXME -->
+            <div>
+                <label for="age" class="bold text-light">Età del passeggero:</label>
+
+                <input class="mt-2" type="number" name="psgAge" id="psgAge" min="0" placeholder="0" required>
+            </div>
+        </div>
+        <div class="d-flex flex-row gap-5 mt-4">
+            <button id="submitValues" class="btn bg-primary text-light">Calcola prezzo</button>
+            <button id="reset-all" class="btn bg-danger text-light">Reset</button>
+        </div>
+        <div class="fs-1 text-light bg-success bg-gradient mt-5">
+            <div id="result"></div>
+        </div>
+    </main>
+
+
+
+    <!-- Boostrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- My Javascript -->
+    <script type="text/javascript" src= "./assets/js/main.js"></script>
+
+    <!-- <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Maggiorenne
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Minorenne</a></li>
+        </ul>
+      </div> -->
+</body>
+</html>
