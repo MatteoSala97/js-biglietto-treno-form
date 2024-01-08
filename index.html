@@ -14,7 +14,7 @@
 </head>
 <body>
     <main class="d-flex flex-column align-items-center">
-        <h1 class="text-center text-light text-uppercase">Calcola il prezzo del tuo biglietto del treno con FrecciaBool</h1>
+        <h2 class="text-center text-light text-uppercase">Calcola il prezzo del tuo biglietto del treno con FrecciaBool</h2>
 
         <div class="d-flex col-6 align-items-center text-center gap-5 ">
             <div>
@@ -37,8 +37,45 @@
             <button id="submitValues" class="btn bg-primary text-light">Calcola prezzo</button>
             <button id="reset-all" class="btn bg-danger text-light">Reset</button>
         </div>
-        <div class="fs-1 text-light bg-success bg-gradient mt-5">
-            <div id="result"></div>
+        <div class="row">
+            <h2 class="text-center mt-5 text-uppercase">Il tuo biglietto</h2>
+            <div class="align-items-start col-12 border-bottom text-uppercase bold fs-3">
+                dettaglio passeggeri
+            </div>
+            <div class="row border-bottom">
+                <div class="col-4">
+                    Nome passeggero
+                </div>
+                <div class="col-2">
+                    Offerta
+                    <div class="mt-5">
+                        biglietto standard
+                    </div>
+                    <div class="mt-5">
+                        biglietto scontato
+                    </div>
+                </div>
+                <div class="col-2">
+                    Carrozza
+                    <div class="mt-5">
+                        placeholder #
+                    </div>
+                </div>
+                <div class="col-2">
+                    Codice CP
+                    <div class="mt-5">
+                        placeholder cp
+                    </div>
+                </div>
+                <div class="col-2">
+                    Costo Biglietto
+                    <div class="text-light mt-5">
+                        <div id="resultPrice"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
         </div>
     </main>
 
@@ -49,14 +86,5 @@
 
     <!-- My Javascript -->
     <script type="text/javascript" src= "./assets/js/main.js"></script>
-
-    <!-- <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Maggiorenne
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Minorenne</a></li>
-        </ul>
-      </div> -->
 </body>
 </html>

@@ -18,7 +18,7 @@ let calcButton = document.getElementById
 let resetButton = document.getElementById("reset-all")
 
 let result = document.getElementById 
-("result");
+("resultPrice");
 
 
 
@@ -68,7 +68,7 @@ calcButton.addEventListener("click", function (e){
     getValues()
     finalPriceCalc()
     console.log (finalPrice)
-    result.innerHTML = "Il prezzo del tuo biglietto è di "+ " " + finalPrice.toFixed(2) + "€"
+    result.innerHTML = finalPrice.toFixed(2) + "€"
 })
 
 //Method allowing to reset all the values
