@@ -30,8 +30,12 @@ function generateCoachNumber() {
     return Math.floor(Math.random() * 20) + 1;
 }
 
-//Function allowing numeric values to be put into input areas
+//Function that randomized the number of CP code
+function generateCPNumber() {
+    return Math.floor(Math.random() * 10000) + 1;
+}
 
+//Function allowing numeric values to be put into input areas
 function getValues(){
     
 //Assigning variables values based on input areas numeric results
@@ -79,6 +83,9 @@ calcButton.addEventListener("click", function (){
     let carrozza = generateCoachNumber();
     resultCarrozza.innerHTML = carrozza;
 
+    // CP function
+    let codiceCP = generateCPNumber();
+    resultNumber.innerHTML = codiceCP;
 
     //Price function
     getValues()
