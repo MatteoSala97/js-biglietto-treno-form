@@ -22,15 +22,18 @@ let resetButton = document.getElementById("reset-all")
 let result = document.getElementById 
 ("resultPrice");
 
-let name = document.getElementById ("name")
+let resultName = document.getElementById("resultName")
 
-function getName(){
-    
-    resultName.innerHTML = getName
-}
 
 //Function that takes the name from the input and puts it into the ticket
 
+calcButton.addEventListener("click", function (){
+    
+    let passengerName = document.getElementById("name").value;
+    
+    resultName.innerHTML = passengerName ||  "Scrivi il tuo nome e cognome nell'area di input";
+
+})
 
 
 //Function allowing numeric values to be put into input areas
@@ -43,13 +46,12 @@ function getValues(){
 
     psgAge = psgAgeElement.value;
 
-    console.log (kmAmount, psgAge)
+    console.log (kmAmount, psgAge);
 }
-
 
 let finalPrice 
 
-// function that calculates the discount amount
+// Function that calculates the discount amount
 
 function priceCalc (firstElement, secondElement){
     let fullPrice = firstElement*kmPrice
