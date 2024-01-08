@@ -22,19 +22,13 @@ let resetButton = document.getElementById("reset-all")
 let result = document.getElementById 
 ("resultPrice");
 
+//Declaring the variable resultName that comes from the input area
 let resultName = document.getElementById("resultName")
 
-
-//Function that takes the name from the input and puts it into the ticket
-
-calcButton.addEventListener("click", function (){
-    
-    let passengerName = document.getElementById("name").value;
-    
-    resultName.innerHTML = passengerName ||  "Scrivi il tuo nome e cognome nell'area di input";
-
-})
-
+//Function that randomized the number of the coach
+function generateCoachNumber() {
+    return Math.floor(Math.random() * 20) + 1;
+}
 
 //Function allowing numeric values to be put into input areas
 
@@ -77,10 +71,20 @@ function finalPriceCalc(){
 // Method allowing to submit values for price calculation
 
 calcButton.addEventListener("click", function (){
+    //Name function
+    let passengerName = document.getElementById("name").value;
+    resultName.innerHTML = passengerName ||  "Scrivi il tuo nome e cognome nell'area di input";
+
+    // Coach function
+    let carrozza = generateCoachNumber();
+    resultCarrozza.innerHTML = carrozza;
+
+
+    //Price function
     getValues()
     finalPriceCalc()
-    console.log (finalPrice)
     resultPrice.innerHTML = finalPrice.toFixed(2) + "€"
+
 })
 
 //Method allowing to reset all the values
@@ -89,6 +93,9 @@ resetButton.addEventListener("click", function (){
     kmAmountElement.value = 0
     psgAgeElement.value = 0
     resultPrice.innerHTML = ""
+    resultName.innerHTML = ""
+    document.getElementById("name").value = ""
+    resultCarrozza.innerHTML = ""
 })
 
 

@@ -18,19 +18,19 @@
 
         <div class="d-flex col-6 align-items-center text-center gap-5 ">
             <div>
-                <label for="name">Nome e cognome:</label>
-                <input class="mt-2" type="text" name="name" id="name" placeholder="Nome e cognome" required>
+                <label for="name">Inserisci il tuo nome e cognome:</label>
+                <input class="mt-2 form-control" type="text" name="name" id="name" placeholder="Nome e cognome" required>
             </div>
             <div>
                 <label for="kmAmount" class="bold text-light">Numero dei chilometri:</label>
-                <input class="mt-2" type="number" name="kmAmount" id="kmAmount"placeholder="0" min="1" required>
+                <input class="mt-2 form-control" type="number" name="kmAmount" id="kmAmount"placeholder="0" min="1" required>
             </div>
 
             <!-- FIXME -->
             <div>
                 <label for="age" class="bold text-light">Età del passeggero:</label>
 
-                <input class="mt-2" type="number" name="psgAge" id="psgAge" min="0" placeholder="0" required>
+                <input class="mt-2 form-control" type="number" name="psgAge" id="psgAge" min="0" placeholder="0" required>
             </div>
         </div>
         <div class="d-flex flex-row gap-5 mt-4">
@@ -44,7 +44,7 @@
             </div>
             <div class="row border-bottom mx-2">
                 <div class="col-4">
-                    Nome Passeggero
+                    <span class="bold fs-5">Nome Passeggero</span>
                     <div class="mt-5" id="resultName"></div>
                 </div>
                 <div class="col-2">
@@ -58,8 +58,7 @@
                 </div>
                 <div class="col-2">
                     <span class="bold fs-5">Carrozza</span>
-                    <div class="mt-5">
-                        placeholder #
+                    <div class="mt-5" id="resultCarrozza">
                     </div>
                 </div>
                 <div class="col-2">
