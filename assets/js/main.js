@@ -1,7 +1,9 @@
 //Variables
+
 let 
 kmAmountElement = document.getElementById ("kmAmount"), 
 psgAgeElement = document.getElementById ("psgAge")
+
 //Const
 const kmPrice = 0.21;
 const discountUnder = 20
@@ -20,6 +22,14 @@ let resetButton = document.getElementById("reset-all")
 let result = document.getElementById 
 ("resultPrice");
 
+let name = document.getElementById ("name")
+
+function getName(){
+    
+    resultName.innerHTML = getName
+}
+
+//Function that takes the name from the input and puts it into the ticket
 
 
 
@@ -64,19 +74,19 @@ function finalPriceCalc(){
 
 // Method allowing to submit values for price calculation
 
-calcButton.addEventListener("click", function (e){
+calcButton.addEventListener("click", function (){
     getValues()
     finalPriceCalc()
     console.log (finalPrice)
-    result.innerHTML = finalPrice.toFixed(2) + "€"
+    resultPrice.innerHTML = finalPrice.toFixed(2) + "€"
 })
 
 //Method allowing to reset all the values
 
-resetButton.addEventListener("click", function (e){
+resetButton.addEventListener("click", function (){
     kmAmountElement.value = 0
     psgAgeElement.value = 0
-    result.innerHTML = ""
+    resultPrice.innerHTML = ""
 })
 
 
